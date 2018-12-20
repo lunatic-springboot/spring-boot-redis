@@ -17,7 +17,7 @@ public class RedisCacheServiceTest {
     @Test
     public void redisString() throws InterruptedException {
         redisCacheService.set("KK","123",1);
-        Thread.sleep(20000);
+        Thread.sleep(2000);
         System.out.println(redisCacheService.get("KK"));
     }
 }
