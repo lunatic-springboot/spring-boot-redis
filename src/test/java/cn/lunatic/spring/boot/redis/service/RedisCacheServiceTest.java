@@ -1,7 +1,7 @@
 package cn.lunatic.spring.boot.redis.service;
 
 import cn.lunatic.spring.boot.redis.Application;
-import cn.lunatic.spring.boot.redis.annotation.UserInfoBO;
+import cn.lunatic.spring.boot.redis.annotation.UserInfo;
 import cn.lunatic.spring.boot.redis.annotation.UserService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -28,11 +28,11 @@ public class RedisCacheServiceTest {
 
     @Test
     public void redisAnnotation() throws InterruptedException {
-        userService.getUserInfo(UserInfoBO.builder().build());
-        userService.getUserInfo(UserInfoBO.builder().id(1).name("张三").build());
-        userService.getUserInfo(UserInfoBO.builder().id(1).name("张三").build());
-        userService.updateUserInfo(UserInfoBO.builder().id(1).name("张三").build());
-        userService.getUserInfo(UserInfoBO.builder().id(1).name("张三").build());
+        userService.getUserInfo(UserInfo.builder().build());
+        userService.getUserInfo(UserInfo.builder().id(1).name("张三").build());
+        userService.getUserInfo(UserInfo.builder().id(1).name("张三").build());
+        userService.updateUserInfo(UserInfo.builder().id(1).name("张三").build());
+        userService.getUserInfo(UserInfo.builder().id(1).name("张三").build());
     }
 
 }

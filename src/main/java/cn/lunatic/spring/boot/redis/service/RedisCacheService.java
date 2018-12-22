@@ -14,7 +14,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * Redis缓存服务
  *
- * @author gan.feng
+ * @author ganlunatic
  */
 @Slf4j
 @Component

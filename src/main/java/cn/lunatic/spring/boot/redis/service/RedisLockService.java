@@ -9,7 +9,7 @@ import org.springframework.util.StringUtils;
 /**
  * Redis分布式锁服务
  *
- * @author ganfeng
+ * @author ganlunatic
  * @date 2018/12/20
  */
 @Slf4j

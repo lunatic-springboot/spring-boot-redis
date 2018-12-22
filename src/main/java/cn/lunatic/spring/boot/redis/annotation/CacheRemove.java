@@ -7,7 +7,7 @@ import java.lang.annotation.Target;
 
 /**
  * 移除缓存注解
- * @author ganfeng
+ * @author ganlunatic
  * @date 2018/12/21
  */
 @Retention(RetentionPolicy.RUNTIME)

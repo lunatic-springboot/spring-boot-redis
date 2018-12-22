@@ -8,7 +8,7 @@ import java.lang.annotation.Target;
 /**
  * 缓存枚举
  *
- * @author ganfeng
+ * @author ganlunatic
  * @date 2018/12/21
  */
 @Target({ElementType.PARAMETER})
