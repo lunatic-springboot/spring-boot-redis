@@ -18,4 +18,13 @@ public class UserService {
     @CacheRemove(cacheName = "USER_INFO", key = {"u.id","u.name"})
     public void updateUserInfo(@Param("u") UserInfo userInfoBO) {
     }
+
+    @Cached(cacheName = "USER_INFO", key = {"id"},expire = 10)
+    public UserInfo getUserInfo(@Param("id") int id) {
+        return UserInfo.builder().id(1).name("张三").build();
+    }
+
+    @CacheRemove(cacheName = "USER_INFO", key = {"id"})
+    public void updateUserInfo(@Param("id") int id) {
+    }
 }

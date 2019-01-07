@@ -21,18 +21,26 @@ public class RedisCacheServiceTest {
 
     @Test
     public void redisString() throws InterruptedException {
-        redisCacheService.set("KK","123",1);
+        redisCacheService.set("KK", "123", 1);
         Thread.sleep(2000);
         System.out.println(redisCacheService.get("KK"));
     }
 
     @Test
-    public void redisAnnotation() throws InterruptedException {
+    public void redisAnnotation() {
         userService.getUserInfo(UserInfo.builder().build());
         userService.getUserInfo(UserInfo.builder().id(1).name("张三").build());
         userService.getUserInfo(UserInfo.builder().id(1).name("张三").build());
         userService.updateUserInfo(UserInfo.builder().id(1).name("张三").build());
         userService.getUserInfo(UserInfo.builder().id(1).name("张三").build());
+    }
+
+    @Test
+    public void redisAnnotation1() {
+        userService.getUserInfo(1);
+        userService.getUserInfo(1);
+        userService.updateUserInfo(1);
+        userService.getUserInfo(1);
     }
 
 }

@@ -128,6 +128,9 @@ public class RedisCacheAop {
     private Object getFieldsObject(ParamFieldBO paramFieldBO) {
         Object actualResult = paramFieldBO.getObject();
         String[] fields = paramFieldBO.getFieldSet().split("\\.");
+        if(fields.length == 1){
+            return actualResult;
+        }
         for ( int i = 1, lenI = fields.length; i < lenI && actualResult != null; ++i ) {
             actualResult = this.getFieldObject(actualResult, fields[i]);
         }
